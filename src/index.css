@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --green-dark: rgb(0, 70, 55);
+  --green-light: rgb(50, 160, 130);
+  --green-light-opacity: rgba(50, 160, 130, 0.65);
+  --green-light-text: rgb(55, 180, 137);
+  --dark-background: rgb(32, 35, 35);
+  --green-dark-opacity: rgba(0, 70, 55, 0.5)
+}
+
+#container{
+  display: flex;
+}
+/* ASIDE */
+.aside{
+  padding: 1px;
+  min-height: 100vh;
+  width: 20%;
+  background-color: var(--dark-background);
+  display: flex;
+  flex-direction: column;
+}
+.aside .aside_header{
+  padding: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  color: var(--green-light-text);
+  align-items: center;
+  gap: 1rem;
+}
+.add_button_container button{
+  width: 100%;
+  font-size: 20px;
+  background-color: var(--green-light-opacity);
+  color: var(--dark-background);
+  padding: 0.8rem;
+  cursor: pointer;
+  border: 0;
+  font-weight: bold;
+}
+.add_button_container button:hover{
+  opacity: 0.7;
+}
+.task_list{
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.task_list li{
+  color: var(--green-light-text);
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: 2px solid var(--green-light-opacity);
+  cursor: pointer;
+  text-align: center;
+}
+.task_list li:hover{
+  background-color: rgba(50, 160, 130, 0.1);
+}
+
+a{
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+.active{
+  
+}
+
+.main{
+  width: 80%;
+  background: linear-gradient(to bottom right, var(--green-light), var(--green-dark)) ;
+  padding: 3rem;
+}
+.content{
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

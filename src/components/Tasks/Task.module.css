@@ -1,0 +1,82 @@
+.li{
+    width: 70%;
+}
+.article{
+    background-color: red;
+}
+.header{
+    /* background-color: ; */
+    display: flex;
+    background-color: rgba(10, 15, 18);
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5rem;
+}
+
+.header h3{
+    font-size: 18;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(220, 250, 240);
+    padding: 0 1rem;
+}
+.header span {
+    display: block;
+    font-size: 16px;
+    padding: 0 2rem;
+    color: var(--green-light);
+}
+.section{
+    align-items: center;
+    background-color: var(--dark-background);
+    color: var(--green-light);
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.section .description{
+    width: 60%;
+    font-size: 15px;
+    letter-spacing: 0.06rem;
+}
+.section b{
+    font-size: 23px;
+}
+.section button{
+    font-size: 20px;
+    /* background-color: var(--green-dark); */
+    background-color: transparent;
+    border: 0;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    color: rgb(220, 250, 240);
+}
+.section button img{
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+}
+.section button img:hover{
+    opacity: 0.6;
+}
+
+.actionButtons{
+    padding: 0 1rem;
+    gap: 1rem;
+    display: flex;
+}
+.actionButtons img{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.actionButtons img:hover{
+    opacity: 0.6;
+}
+.actionButtons button{
+    background-color: transparent;
+}
+

@@ -1,0 +1,88 @@
+.add_task_form{
+    background-color: var(--dark-background);
+    padding: 1.3rem 2rem 4rem 1.3rem;
+    max-width: 900px;
+    width: 60%;
+    position: relative;
+}
+.input_container{
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    display: flex;
+    gap: 1rem;
+    color: rgb(200, 255, 220, 0.7);
+    font-size: 20px;
+    justify-content: space-between;
+}
+.input_container input{
+    width: 75%;
+    padding: 0.1rem 0.2rem;
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid var(--green-light-opacity);
+    color: var(--green-light);
+    font-size: 18px;
+}
+.input_container input:focus{
+    outline: 0;
+    border-bottom: 1px solid var(--green-light);
+}
+input[type=range] {
+    appearance: none; /* Usuwa domyślny wygląd suwaka */
+    background-color: var(--green-dark); /* Kolor tła suwaka */
+    border: 0;
+    cursor: pointer;
+    height: 5px; /* Wysokość suwaka */
+    border-radius: 5px; /* Zaokrąglenie krawędzi suwaka */
+    /* outline: none; Usuwa domyślne obramowanie */
+}
+input[type=range]::-webkit-slider-thumb {
+    /* Ustaw kolor kreski wskazującej pozycję */
+    -webkit-appearance: none; /* Usuwa domyślny wygląd kreski w przeglądarkach opartych na WebKit */
+    appearance: none; /* Usuwa domyślny wygląd kreski */
+    width: 15px; /* Szerokość kreski */
+    height: 15px; /* Wysokość kreski */
+    background: var(--green-light); /* Kolor kreski */
+    border-radius: 50%; /* Zaokrąglenie kreski */
+    cursor: pointer; /* Kursor podczas najechania */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    border-radius: 5px; /* Zaokrąglenie krawędzi paska wypełnienia */
+}
+input[type=range]:focus{
+    border: 0;
+}
+.textarea_container{
+    flex-direction: column;
+    padding: 0.5rem;
+    min-width: 340px;
+}
+.textarea_container textarea{
+    font-size: 16px;
+    padding: 0.4rem;
+    letter-spacing: 0.07rem;
+    line-height: 1.4rem;
+    background-color: var(--green-dark-opacity);
+    border: 0;
+    color: rgb(200, 255, 220, 0.7);
+}
+.textarea_container textarea:focus{
+    outline: 0;
+}
+
+.submitButton{
+    background-color: var(--green-dark-opacity);
+    border: 0;
+    color: rgb(200, 255, 220, 0.7);
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 2.5rem;
+    cursor: pointer;
+}
+.submitButton:hover{
+    background-color: var(--green-dark);
+}
+
