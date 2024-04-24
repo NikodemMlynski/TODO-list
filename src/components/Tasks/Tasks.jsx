@@ -5,7 +5,7 @@ import Task from "./Task";
 import classes from './Tasks.module.css';
 
 export default function Tasks(){
-    const {taskType} = useParams();
+    const {taskType, taskName} = useParams();
     const tasks = useSelector(state => state.tasks.value);
     const [displayedTasks, setDisplayedTasks] = useState([]);
     console.log(tasks);
@@ -15,16 +15,16 @@ export default function Tasks(){
     useEffect(() => {
         switch(taskType){
             case 'today':
-                setDisplayedTasks(findTodayTasks([...sortTasksByPriority(tasks)]));
+                setDisplayedTasks(filterTasks(findTodayTasks([...sortTasksByPriority(tasks)])) );
                 break;
             case 'upcoming':
-                setDisplayedTasks(findUpcomingTasks([...sortTasksByPriority(tasks)]));
+                setDisplayedTasks(filterTasks(findUpcomingTasks([...sortTasksByPriority(tasks)])));
                 break;
             case 'completed':
-                setDisplayedTasks(findCompletedTasks([...sortTasksByPriority(tasks)]));
+                setDisplayedTasks(filterTasks(findCompletedTasks([...sortTasksByPriority(tasks)])));
                 break;
         }
-    }, [taskType, tasks])
+    }, [taskType, tasks, taskName])
 
     const findCompletedTasks = (tasks) => {
         const completedTasks = tasks.filter(task => task.completed === true);
@@ -52,7 +52,13 @@ export default function Tasks(){
             if(taskDate.getDate() === today.getDate() && taskDate.getMonth() === today.getMonth() && taskDate.getFullYear() === today.getFullYear()) return task;
         })
         return todayTasks;
-    }   
+    }  
+
+    const filterTasks = (tasks) => {
+        const filteredArr = tasks.filter(task => task.title.toLowerCase().includes(taskName.toLowerCase()));
+        console.log(filteredArr);
+        return filteredArr;
+    }
     
 
     return (

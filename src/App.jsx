@@ -16,7 +16,13 @@ const router = createBrowserRouter([
       },
       {
         path: ':taskType',
-        element: <Tasks/>
+        element: <Tasks/>,
+        children: [
+          {
+            path: ':taskName',
+            element: <Tasks/>
+          }
+        ]
       },
     ]
   }

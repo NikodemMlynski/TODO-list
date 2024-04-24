@@ -9,7 +9,7 @@
   --green-dark: rgb(0, 70, 55);
   --green-light: rgb(50, 160, 130);
   --green-light-opacity: rgba(50, 160, 130, 0.65);
-  --green-light-text: rgb(55, 180, 137);
+  --green-light-text: rgb(80, 210, 165);
   --dark-background: rgb(32, 35, 35);
   --green-dark-opacity: rgba(0, 70, 55, 0.5)
 }
@@ -61,7 +61,7 @@
   text-align: center;
 }
 .task_list li:hover{
-  background-color: rgba(50, 160, 130, 0.1);
+  background-color: rgba(50, 160, 130, 0.04);
 }
 
 a{
@@ -70,9 +70,6 @@ a{
   color: inherit;
   display: block;
   width: 100%;
-}
-.active{
-  
 }
 
 .main{
