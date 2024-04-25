@@ -55,6 +55,7 @@ export default function Tasks(){
     }  
 
     const filterTasks = (tasks) => {
+        if(!taskName) return tasks;
         const filteredArr = tasks.filter(task => task.title.toLowerCase().includes(taskName.toLowerCase()));
         console.log(filteredArr);
         return filteredArr;

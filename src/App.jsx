@@ -24,6 +24,10 @@ const router = createBrowserRouter([
           }
         ]
       },
+      {
+        path: 'edit/:taskId',
+        element: <AddTaskForm/>
+      }
     ]
   }
 ])

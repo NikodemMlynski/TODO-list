@@ -23,9 +23,9 @@ export const tasksSlice = createSlice({
             state.value = state.value.filter(task => task.id !== action.payload.id);
         },
         updateTask: (state, action) => {
-            const index = state.value.findIndex(task => task.id === action.payload.id);
-            if(index !== -1){
-                state.value[index] = action.payload.task;
+            const index = state.value.findIndex(task => task.id == action.payload.task.id);
+            if(!(index === -1)){
+                state.value[index] = {...action.payload.task};
             }
         },
         completeTask: (state, action) => {

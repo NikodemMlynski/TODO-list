@@ -6,9 +6,11 @@ import editIcon from './../../images/edit.png';
 import uncomplete from './../../images/uncomplete.png';
 import { useDispatch } from 'react-redux';
 import {completeTask, deleteTask} from './../../store/taskReducer';
+import { useNavigate } from 'react-router-dom';
 
 export default function Task({id, title, time, date, priority, description, completed }) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const completeTaskFn = (id) => {
         dispatch(completeTask({id}))
@@ -31,7 +33,7 @@ export default function Task({id, title, time, date, priority, description, comp
                     <b>{priority}</b>
                     <button  onClick={() => completeTaskFn(id)}>{completed ? <img src={uncomplete} alt="" /> : <img src={completeIcon} alt="" /> }</button>
                     <section className={classes.actionButtons}>
-                        <button><img src={editIcon} alt="complete" /></button>
+                        <button onClick={() => navigate(`/edit/${id}`)}><img src={editIcon} alt="complete" /></button>
                         <button><img src={deleteIcon} onClick={() => deleteTaskFn(id)} alt="delete"  /></button>
                     </section>
                 </section>
